@@ -14,6 +14,11 @@ import java.io.*;
  * 			Output Array: 2 1 4 3
  */
 
+/**
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+
 public class SwapAlternate {
     static int testCaseSize, arrSize, arr[];
 
