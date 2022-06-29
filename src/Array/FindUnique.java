@@ -50,12 +50,12 @@ public class FindUnique {
         System.out.println("\n*** caseNum."+(caseNum+1)+" ***"); 
         // Take input for current test case
         takeInput();
-        // Printing the array before performing operations
+        // Printing the array
         System.out.println("Array: ");  
         printArray();
-        // Swap Alternate Elements
+        // Finding Unique Elements
         int unique = findUniqueElement();
-        // Printing the array after performing operations
+        // Printing the output
         System.out.println("Unique Element in given array is: "+unique);
         System.out.println("=================================="); 
     }
@@ -82,7 +82,6 @@ public class FindUnique {
     }
 
     public static int findUniqueElement() {
-        // Loop until next element is less than array arrSize
     	int unique = arr[0];
         for(int i=1; i<arr.length; i++) {
             // XOR of all array elements
