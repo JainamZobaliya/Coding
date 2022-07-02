@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 /**
  * Time Complexity: O(Max(arr1.length, arr2.length))
- * Space Complexity: O(1)
+ * Space Complexity: O(N)
  */
 
 public class FindIntersection {
