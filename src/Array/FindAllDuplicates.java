@@ -89,10 +89,10 @@ public class FindAllDuplicates {
     public static int[] findDuplicates(int[] arr) {
     	ArrayList<Integer> duplicates = new ArrayList<Integer>();
     	for(int i=0; i<arr.length;++i) {
-    		int index = Math.abs(arr[i])-1;
-    		if(arr[index]<0)
+    		int index = Math.abs(arr[i])-1; // Taking the position i.e (value-1)[due to 0 index]
+    		if(arr[index]<0) // we have visited that element value once i.e. it is repeated
     			duplicates.add(Math.abs(arr[i]));
-    		else
+    		else // Marking the element as visited
     			arr[index] = -arr[index];
     	}
     	int[] duplicatesArr = new int[duplicates.size()];
