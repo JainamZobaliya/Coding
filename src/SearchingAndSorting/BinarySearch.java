@@ -7,16 +7,16 @@ import java.io.*;
  * Problem Statement: To return the index of a key from an array. 
  * 	Example:
  * 		Test Case 1: 
- * 			Input Array: 4 3 2 7 8 2 3 1
- * 			Input Key: 8
+ * 			Input Array: 2 4 6 8 10 12
+ * 			Input Key: 10
  * 			Output: 4
  *		Test Case 2: 
- * 			Input Array: 1 2 2 3
- * 			Input Key: 2
+ * 			Input Array: 1 3 5 7 9 11 13
+ * 			Input Key: 3
  * 			Output: 1
  *		Test Case 3: 
- * 			Input Array: 5 8 9 6 4 2
- * 			Input Key: 3
+ * 			Input Array: 1 2 3 4 5 6 7
+ * 			Input Key: 8
  * 			Output: -1 ... Not Present in the array
  */
 
