@@ -1,4 +1,4 @@
-package Array;
+package SearchingAndSorting;
 
 import java.io.*;
 
@@ -50,7 +50,6 @@ public class LinearSearch {
             }
         } while(testCaseSize<=0);
         // Take input for current test case
-        // Taking a valid array arrSize - input and arrSize should be an odd number
         arr = new int[testCaseSize][];
         key = new int[testCaseSize];
         for(int i=0; i<testCaseSize; ++i) {
