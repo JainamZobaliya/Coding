@@ -21,7 +21,7 @@ import java.io.*;
  */
 
 /**
- * Time Complexity: O(logN)
+ * Time Complexity: O(N)
  * Space Complexity: O(1)
  */
 
@@ -75,27 +75,29 @@ public class FindPivotIndex {
         // Printing the array
         System.out.print("Array: ");  
         printArray(arr);
-        // get index of Peak Element
-        int index = indexOfPeakElement(arr);
+        // find pivot index
+        int index = findPivotIndex(arr);
         // Printing the output
-        System.out.println("Peak Position: "+index);
+        System.out.println("Pivot Index: "+index);
         System.out.println("=================================="); 
     }
 
-    private static int indexOfPeakElement(int[] arr) {
-    	int start = 0, end = arr.length-1;
-    	while(start<end) {
-        	int mid = getMidIndex(start, end);
-    		if(arr[mid]<arr[mid+1]) // On / (this going upwards) part of mountain
-    			start = mid+1;
-    		else // On \ (this going downwards) part of mountain or the peak;
-    			end = mid;
-    	}
-        return start;
-    }
-    
-    private static int getMidIndex(int start, int end) {
-    	return start + (end-start)/2; // To avoid error due to range
+    private static int findPivotIndex(int[] arr) {
+        int sumLeft = 0, sumRight = 0;
+        // Calculating sum of all elements right to index 0
+        for(int i=1; i<arr.length; ++i)
+            sumRight+=arr[i];
+        for(int i=0; i<arr.length; ++i){
+        	// Comparing Left and Right Sum
+            if(sumLeft==sumRight)
+                return i;
+            // Adding current element to Left-Sum
+            sumLeft += arr[i];
+            // Removing next element from Right-Sum
+            if(i+1<arr.length)
+                sumRight -= arr[i+1];
+        }
+        return -1;
     }
 
     private static void printArray(int[] arr) {
