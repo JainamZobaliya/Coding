@@ -80,8 +80,10 @@ public class ArraySum {
     }
 
     private static int calculateSum(int[] arr, int position) {
+    	// Base Case
     	if(position==0)
     		return arr[0];
+    	// Recursive Relation
     	return arr[position]+ calculateSum(arr, position-1);
 	}
 
