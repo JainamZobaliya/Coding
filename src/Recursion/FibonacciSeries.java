@@ -4,14 +4,14 @@ import java.io.*;
 
 /**
  * FibonacciSeries
- * Problem Statement: To print N'th term of Fibonacci Series.
+ * Problem Statement: To print N term of Fibonacci Series.
  * 	Example:
  * 		Test Case 1: 
  * 			Input: 5
- * 			Output: 5
+ * 			Output: 1 1 2 3 5 
  *		Test Case 2: 
  * 			Input: 4
- * 			Output: 3
+ * 			Output: 1 1 2 3
  */
 
 /**
